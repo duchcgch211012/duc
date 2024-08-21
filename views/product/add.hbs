@@ -1,0 +1,39 @@
+<div class="container text-center card bg-light col-md-6">
+    <form action="/product/add" method="post">
+        <h1 class="text text-danger">Add New Product</h1>
+        <div class="form-group">
+            <label class="text text-danger fw-bold">Product Title</label>
+            <input class="form-control" type="text" name="title" placeholder="Enter Product name" required id="">
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="text text-danger fw-bold">Category</label>
+            <select name="category" id="">
+                {{#each categories }}
+                <option value="{{_id}}">{{ title }}</option>
+                {{/each}}
+            </select>
+        </div>
+        <br>
+        <label class="text text-danger fw-bold">Product Price</label>
+        <input class="form-control" type="number" name="price" placeholder="Enter product price" required id="">
+        <br><br>
+
+        <label class="text text-danger fw-bold">Product Imag</label>
+        <input class="form-control" type="url" name="cover" placeholder="Enter product cover url" required id="">
+        <br><br>
+
+        <label class="text text-danger fw-bold">Product Quantity</label>
+        <input class="form-control" type="number" name="quantity" placeholder="Enter product quantity" required id="">
+        <br><br>
+
+        <label class="text text-danger fw-bold">Description</label>
+        <input class="form-control" type="string" name="description" placeholder="Enter description of product" required
+            id="">
+        <div class="form-group mt-3 mb-3">
+            <input class="btn btn-success" type="submit" value="Add">
+        </div>
+
+    </form>
+
+</div>

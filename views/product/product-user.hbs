@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <header class="bg-dark text-white p-4">
+        <div class="container d-flex justify-content-between">
+            <h2>Children's Toy Store</h2>
+            <nav>
+                <a class="text-white" href="/">HOME</a>
+                <a class="text-white ml-3" href="/product">Product</a>
+                <a class="text-white ml-3" href="/category-user">Category</a>
+               
+                {{#if user}}
+                <a class="text-white ml-3" href="/logout">Logout</a>
+                {{else}}
+                <a class="text-white ml-3" href="/logout">Logout</a>
+                {{/if}}
+            </nav>
+        </div>
+    </header>
+    <table class="table table-success">
+        <thead>
+            <tr>
+                <th colspan="7" class="h1 text-danger"> PRODUCT LIST</th>
+
+            </tr>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Title</th>
+                <th>Category</th>
+                <th>Product Price</th>
+                <th>Product Cover</th>
+                <th>Product Quantity</th>
+                <th>Product Description</th>
+                <th>Menu</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#each product}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{title}}</td>
+                <td>{{category.title}}</td>
+                <td>{{price}}</td>
+                <td><img src="{{cover}}" alt="product cover" width="100" height="120"></td>
+                <td>{{quantity}}</td>
+                <td>{{description}}</td>
+                <td>
+                    {{!-- <a href="/product/detail/{{_id}}" class="btn btn-primary">View Details</a>
+
+                    <a href="/order" class="btn btn-success">Order</a> --}}
+                      <td>
+                    <form action="/order/add" method="POST">
+                        <input type="hidden" name="productId" value="{{_id}}">
+                        <input type="number" name="quantity" min="1" max="{{quantity}}" value="1" required>
+                        <button type="submit" class="btn btn-success">Order</button>
+                    </form>
+                    <a href="/product/detail/{{_id}}" class="btn btn-primary">View Details</a>
+                </td>
+
+
+                </td>
+
+
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+body {
+  background-color: #f8f9fa;
+}
+header {
+  background-color: #5190cf;
+  color: white;
+}
+h1 {
+  font-size: 1.75rem;
+}
+nav a {
+  color: white;
+  margin-right: 10px;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://assets.htv.com.vn/Images/TAP%20CHI%20HTV/XEM%20GI%20HOM%20NAY/DUONG/NINJAGO/The%20lego%20Ninjago%20movie%201.jpg);
+  text-align: center;
+}
+
+h2 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+}
+
+.toys {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.toy {
+  background: white;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.toy img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.toy h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.toy p {
+  color: #555;
+  font-size: 1em;
+}

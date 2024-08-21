@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <link rel="stylesheet" href="/path/to/your/css/bootstrap.min.css"> <!-- Update the path to your CSS file -->
+</head>
+<body>
+    <header class="bg-dark text-white p-4">
+        <div class="container d-flex justify-content-between">
+            <h2>Children's Toy Store - Order List</h2>
+            <nav>
+                <a class="text-white" href="/">Home Page </a>
+                <a class="text-white ml-3" href="/order/list">Order List</a>
+                {{#if user}}
+                <a class="text-white ml-3" href="/logout">Logout</a>
+                {{else}}
+                <a class="text-white ml-3" href="/login">Login</a>
+                {{/if}}
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <h1>Order List</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Status</th>
+                    <th>Products</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orders}}
+                <tr>
+                    <td>{{this._id}}</td>
+                    <td>{{this.customer.email}}</td>
+                    <td>{{this.status}}</td>
+                    <td>
+                        <ul>
+                            
+                            <li>{{this.product.title}} - Quantity: {{this.quantity}}</li>
+                          
+                        </ul>
+                    </td>
+                    <td>
+                        <a href="/order/detail/{{this._id}}" class="btn btn-info">View Details</a>
+                        <a href="/order/update-status/{{this._id}}" class="btn btn-warning">Update Status</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

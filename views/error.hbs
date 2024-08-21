@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Lỗi</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Có lỗi xảy ra</h2>
+    <p>{{message}}</p>
+    <p>{{error.status}}</p>
+    <pre>{{error.stack}}</pre>
+    <a href="/" class="btn btn-primary">Quay lại trang chủ</a>
+  </div>
+</body>
+</html>

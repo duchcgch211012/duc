@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <header class="bg-dark text-white p-6">
+        <div class="container d-flex justify-content-between">
+            <h1>Children's Toy Store</h1>
+            <nav>
+                <a class="text-white" href="/">HOME</a>
+                <a class="text-white ml-3" href="/product">Product</a>
+                <a class="text-white ml-3" href="/cart">Cart</a>
+                <a class="text-white ml-3" href="/contact">Contact</a>
+                {{#if user}}
+                <a class="text-white ml-3" href="/logout">Logout</a>
+                {{else}}
+                <a class="text-white ml-3" href="/login">Login</a>
+                <a class="text-white ml-3" href="/signup">Register</a>
+                {{/if}}
+            </nav>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <h2>Welcome to Children's Toy Store</h2>
+
+    <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://images-na.ssl-images-amazon.com/images/I/61toCCOWwTL.jpg" alt="Product Image" >
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="/product/detail/{{_id}}" class="title">Batman Figure</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">25$</span>
+                </div>
+                <a href="/product/detail/{{_id}}" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://sideshow-prod-media.s3.amazonaws.com/admin-media/product_characters/471b365d-c108-4a36-8892-63f44b7fa394_superman-collectible-figures-sideshow-thumb.jpg" alt="Product Image">
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="#" class="title">Superman Figure</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">30$</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://i.pinimg.com/originals/59/49/97/594997f29cd01a61abb4a9ad381e42a2.jpg" alt="Product Image">
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="#" class="title">Monopoly Board Game</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">20$</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3vlCV8p4vPRgfnEMF0oTEhv-6HRux1jAUnQ&s" alt="Product Image">
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="#" class="title">Scrabble Board Game</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">18$</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://media.4rgos.it/i/Argos/3904567_R_Z001A_UC706239?w=750&h=440&qlt=70" alt="Product Image">
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="#" class="title">Chess Board Game</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">15$</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2019/11/0/0/DS_CHA_CMC39_19117_003X.jpg?ve=1&tl=1" alt="Product Image">
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="#" class="title">American Girl Doll</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">100$</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://upload.wikimedia.org/wikipedia/en/4/46/LegoMinifigureHiker.png" alt="Product Image">
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="#" class="title">LEGO Action Figure</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">40$</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <figure class="card card-product-grid">
+            <div class="img-wrap">
+                <a href="#">
+                    <img width="100%" height="240" src="https://m.media-amazon.com/images/I/61vZxoDOLoS._AC_SL1000_.jpg" alt="Product Image">
+                </a>
+            </div>
+            <figcaption class="info-wrap border-top" style="text-align: center;">
+                <a href="#" class="title">Checkers Board Game</a>
+                <div class="price-wrap">
+                    <span class="price" style="color: red;">10$</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="display: inline-block;">Detail</a>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+
+
+    </main>
+</body>
+
+</html>

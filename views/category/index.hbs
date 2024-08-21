@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <header class="bg-dark text-white p-4">
+        <div class="container d-flex justify-content-between">
+            <h2>Cửa hàng Đồ Chơi Trẻ Em</h2>
+            <nav>
+                <a class="text-white" href="/">Home Page</a>
+                <a class="text-white ml-3" href="/product">Products</a>
+                <a class="text-white ml-3" href="/category">Category Product</a>
+
+                {{#if user}}
+                <a class="text-white ml-3" href="/logout">Logout</a>
+                {{else}}
+                <a class="text-white ml-3" href="/login">Login</a>
+                {{/if}}
+            </nav>
+        </div>
+    </header>
+    <table class="table table-success">
+        <thead>
+            <tr>
+                <th colspan="4" class="h1 text-danger"> CATEGORY LIST</th>
+            </tr>
+            <tr>
+                <th>Category Id</th>
+                <th>Category Title</th>
+                <th>Category Cover</th>
+                <th>Menu</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each category}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{title}}</td>
+                <td><img src="{{img}}" alt="product cover" width="100" height="120"></td>
+                <td>
+                    <a href="/category/add" class="btn btn-primary">ADD</a>
+                    <a class="btn btn-warning" href="/category/edit/{{_id}}">Edit</a>
+                    <a class="btn btn-danger" href="/category/delete/{{_id}}"
+                        onclick="return confirm('Are you ready to delete?')">Delete</a>
+                    
+
+                </td>
+            </tr>
+
+            {{/each}}
+        </tbody>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
